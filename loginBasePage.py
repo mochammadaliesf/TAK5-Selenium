@@ -32,7 +32,7 @@ def test_tc017_invalidEmail(self, emailInput, passInput, message):
     browser.find_element(By.NAME, loginPage.pass_field).send_keys(passInput)
     # Finding the login button and click it
     browser.find_element(By.CLASS_NAME, loginPage.login_btn).click()
-    # Finding the success register attribute
+    # Finding the failed login attribute
     invalid_email = browser.find_element(By.XPATH, loginPage.unregistered_email_msg).text
     # Test validation
     self.assertIn(message, invalid_email)
