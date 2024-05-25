@@ -14,8 +14,8 @@ class cartPage():
     checkout_btn = 'checkout'
 
     # Initiate responses attribute
-    checkout_fail = 'div#terms-of-service-warning-box > p'
-    checkout_success = 'https://demowebshop.tricentis.com/onepagecheckout'
+    checkout_fail = 'terms-of-service-warning-box'
+    checkout_success = '//body/div[@class="master-wrapper-page"]/div[@class="master-wrapper-content"]/div[@class="master-wrapper-main"]//h1[.="Checkout"]'      #By XPATH
 
 class loginData():
     # Test data for log in
@@ -29,3 +29,4 @@ class cartData():
 
     # Message responses for each scenarios
     msg_checkout_fail = 'Please accept the terms of service before the next step.'
+    msg_checkout_success = 'Checkout'

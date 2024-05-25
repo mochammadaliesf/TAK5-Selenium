@@ -18,7 +18,17 @@ class cartToCheckout(unittest.TestCase):
             loginData.valid_email,
             loginData.valid_password,
             cartData.qty_item,
-            cartPage.checkout_success
+            cartData.msg_checkout_success
+        )
+    
+    # Insert test data for TC036
+    def test_tc036_uncheckedTOS(self):
+        cartBasePage.test_tc036_uncheckedTOS(
+            self,
+            loginData.valid_email,
+            loginData.valid_password,
+            cartData.qty_item,
+            cartData.msg_checkout_fail
         )
 
 if __name__ == '__main__':
